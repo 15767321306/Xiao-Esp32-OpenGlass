@@ -1,4 +1,3 @@
-readmd.txt
 # 配置详细信息
 
 ## WiFi 配置
@@ -12,5 +11,3 @@ readmd.txt
 ## 百度云语音识别
 - **apiKey**: 百度云语音识别服务的 API 密钥。
 - **secretKey**: 百度云语音识别服务的密钥。
-
-注：此版本需要一张fat32的sd卡
