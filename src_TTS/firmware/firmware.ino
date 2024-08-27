@@ -20,17 +20,15 @@ String text = "";  // 定义全局变量 text 用于存储识别结果
 #define FRAME_SIZE 160    //大小
 unsigned long recordingStartTime = 0;
 bool isRecording = false;
-const unsigned long recordingDuration = 5000;  // 2 seconds recording duration
+const unsigned long recordingDuration = 5000;  // 5 seconds recording duration
 
 // 静态分配缓冲区以避免内存碎片化
 // 假设录音时长为5秒，采样率为8000Hz，位深度为16位（2字节）
-// 所需缓冲区大小为 8000 * 3 * 2 = 48000 字节
+// 所需缓冲区大小为 8000 * 5 * 2 = 80000 字节
 #define MAX_RECORDING_SIZE (SAMPLE_RATE * 5 * SAMPLE_BITS / 8)
 uint8_t s_recording_buffer[MAX_RECORDING_SIZE];
 size_t totalBytesRead = 0;  // 全局变量，用于累积读取的字节数
 size_t recording_buffer_size = FRAME_SIZE * 2;
-
-File file;  //全局文件变量
 
 #define Serialtts_TX 1
 #define Serialtts_RX 2
